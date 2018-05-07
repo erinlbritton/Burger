@@ -1,0 +1,56 @@
+.burger {
+    max-width: 300px;
+    max-height: auto;
+}
+
+.jumbotron {
+    background-color: #cfebea;
+    margin-top: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.container {
+    background-color: #e7f5f5;
+    height: 100%;
+}
+
+html, body, .background {
+    height: 100%;
+}
+
+form {
+    min-height: 100%;
+}
+
+tr {
+    height: 46.667px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: middle;
+  border-top: 1px solid #ddd;
+}
+
+.devour {
+    margin-left: 10px;
+}
+
+.burger-title {
+    color: #95c44b;
+}
+
+.background {
+    background: url('/assets/img/memphis-colorful.png');
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+ }

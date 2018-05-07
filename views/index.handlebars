@@ -1,14 +1,33 @@
-<ul>
-    {{#each burgers}}
-        <li>
-            {{burger_name}}
-            <button data-burgerID="{{id}}" class="devour">Devour!</button>
-        </li>
-    {{/each}}
-</ul>
-
-<h2>Add New Burger</h2>
-<form id="add" class="button-size">
-    <textarea type="text" name="addBurger"></textarea>
-    <button type="submit">Add!</button>
-</form>
+<div class="row">
+    <div class="col-md-6">
+        <h2 class="burger-title">Burgers to Eat</h2>
+        <table class="table table-striped">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                {{/unless}}
+            {{/each}}
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h2 class="burger-title">Devoured Burgers</h2>
+        <table class="table table-striped">
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                {{/if}}
+            {{/each}}
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form id="addBurger">
+            <div class="form-group">
+                <label for="burgerName">Add a Burger</label>
+                <input type="text" class="form-control" id="burgerName" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-danger">Add</button>
+        </form>
+    </div>
+</div>
